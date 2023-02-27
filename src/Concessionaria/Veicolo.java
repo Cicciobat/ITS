@@ -158,6 +158,3 @@ class Moto extends Veicolo{
                 "\n\t Sidecar: " + hasSidecar();
     }
 }
-
-
-suca
