@@ -1,13 +1,15 @@
+/* Made by Francesco Battaglia */
+
 package Concessionaria;
 
 public abstract class Veicolo {
     protected String marca, modello;
     protected int anno_fabbricazione;
     protected double cilindrata, prezzo;
-    private static int count;
+    private static int count;       // Contatore per gli oggetti creati
 
-    public Veicolo(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo) {
-        count++;
+    public Veicolo(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
+        count++;    // Viene incrementato il contatore ogni volta che viene richiamato il costruttore
         this.marca = marca;
         this.modello = modello;
         this.anno_fabbricazione = anno_fabbricazione;
@@ -57,28 +59,28 @@ public abstract class Veicolo {
 
     public abstract String getTipo();
 
-    public double getPrezzoIVA() {
+    public double getPrezzoIVA() {      // Ritorna il prezzo del veicolo ivato
         return this.prezzo * 1.22;
     }
 
-    public static int getNumeroVeicoli() {
+    public static int getNumeroVeicoli() {      // Metodo statico per ottenere il numero degli oggetti instanziati
         return count;
     }
 
-    public String toString() {
+    public String toString() {      // Stampa i dettagli del veicolo
         return  "\n\t Marca: " + getMarca() +
                 "\n\t Modello: " + getModello() +
                 "\n\t Anno di fabbricazione: " + getAnno_fabbricazione() +
-                "\n\t Cilindrata: %.2f".formatted(getCilindrata()) + " cm\u00B3" +
-                "\n\t Prezzo: %,.2f".formatted(getPrezzo()) + " \u20AC" +
-                "\n\t Prezzo ivato: %,.2f".formatted(this.getPrezzoIVA()) + " \u20AC";
+                "\n\t Cilindrata: %.2f".formatted(getCilindrata()) + " cm\u00B3" +      // Stampa il valore formattato nella notazione #.###,##
+                "\n\t Prezzo: %,.2f".formatted(getPrezzo()) + " \u20AC" +       // Stampa il valore formattato nella notazione #.###,##
+                "\n\t Prezzo ivato: %,.2f".formatted(this.getPrezzoIVA()) + " \u20AC";  // Riferimento al getPrezzoIVA della classe, stampa il valore formattato nella notazione #.###,##
     }
 }
 
 class Auto extends Veicolo {
     private int numeroPorte;
 
-    public Auto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, int numeroPorte) {
+    public Auto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, int numeroPorte) {      // Costruttore della sottoclasse Auto, eredita gli attributi dalla classe genitore
         super(marca, modello, anno_fabbricazione, cilindrata, prezzo);
         this.numeroPorte = numeroPorte;
     }
@@ -91,7 +93,7 @@ class Auto extends Veicolo {
         return numeroPorte;
     }
 
-    public double getPrezzoIVA(int quantita) {
+    public double getPrezzoIVA(int quantita) {      // Calcola il prezzo scontato per singola auto in base alla quantità inserita in ordine
         double prezzoScontato = super.getPrezzoIVA();
 
         for (int i = 0; i < quantita; i++) {
@@ -101,14 +103,14 @@ class Auto extends Veicolo {
     }
 
     @Override
-    public String getTipo() {
+    public String getTipo() {       // Restituisce il nome della classe
         return getClass().getSimpleName();
     }
 
     @Override
-    public String toString() {
+    public String toString() {      // Override della stampa dettagli del veicolo con implementazione metodi propri della sottoclasse
         return  "Categoria: " + getTipo() +
-                super.toString() +
+                super.toString() +      // Richiama il metodo stampa dettagli dalla classe genitore
                 "\n\t Porte: " + getnumeroPorte();
     }
 }
@@ -116,7 +118,7 @@ class Auto extends Veicolo {
 class Moto extends Veicolo{
     private boolean sidecar;
 
-    public Moto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, boolean sidecar) {
+    public Moto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, boolean sidecar) {  // Costruttore della sottoclasse Moto, eredita gli attributi dalla classe genitore
         super(marca, modello, anno_fabbricazione, cilindrata, prezzo);
         this.sidecar = sidecar;
     }
@@ -129,32 +131,32 @@ class Moto extends Veicolo{
         return sidecar;
     }
 
-    public String hasSidecar(){
+    public String hasSidecar(){     // Restituisce Si o No se presente o meno il sidecar, implementazione su stampa dettagli
         if(isSidecar()){
             return "Si";
         } else return "No";
     }
 
     @Override
-    public double getPrezzoIVA() {
+    public double getPrezzoIVA() {      // Override del metodo getPrezzoIVA con implementazione sconto se la moto possiede il Sidecar
         double prezzoIvato = super.getPrezzoIVA();
         double sconto = (prezzoIvato * 5) / 100;
 
         if (isSidecar()){
-            return prezzoIvato - sconto;
+            return prezzoIvato - sconto;        // Applica uno sconto del 5% se presente il sidecar
         }
         else return prezzoIvato;
     }
 
     @Override
-    public String getTipo() {
+    public String getTipo() {       // Restituisce il nome della classe
         return getClass().getSimpleName();
     }
 
     @Override
-    public String toString() {
+    public String toString() {      // Override della stampa dettagli del veicolo con implementazione metodi propri della sottoclasse
         return  "Categoria: " + getTipo() +
-                super.toString() +
+                super.toString() +      // Richiama il metodo stampa dettagli dalla classe genitore
                 "\n\t Sidecar: " + hasSidecar();
     }
 }
