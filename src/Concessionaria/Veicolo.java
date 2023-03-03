@@ -8,7 +8,7 @@ public abstract class Veicolo {
     protected double cilindrata, prezzo;
     private static int count;       // Contatore per gli oggetti creati
 
-    protected Veicolo(String marca, String modello, int annoFabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
+    protected Veicolo(String marca, String modello, int annoFabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore, visible solo alle sotto classi
         count++;    // Viene incrementato il contatore ogni volta che viene richiamato il costruttore
         this.marca = marca;
         this.modello = modello;
