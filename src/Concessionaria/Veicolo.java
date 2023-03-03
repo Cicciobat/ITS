@@ -4,15 +4,15 @@ package Concessionaria;
 
 public abstract class Veicolo {
     protected String marca, modello;
-    protected int anno_fabbricazione;
+    protected int annoFabbricazione;
     protected double cilindrata, prezzo;
     private static int count;       // Contatore per gli oggetti creati
 
-    protected Veicolo(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
+    protected Veicolo(String marca, String modello, int annoFabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
         count++;    // Viene incrementato il contatore ogni volta che viene richiamato il costruttore
         this.marca = marca;
         this.modello = modello;
-        this.anno_fabbricazione = anno_fabbricazione;
+        this.annoFabbricazione = annoFabbricazione;
         this.cilindrata = cilindrata;
         this.prezzo = prezzo;
     }
@@ -33,12 +33,12 @@ public abstract class Veicolo {
         this.modello = modello;
     }
 
-    public int getAnno_fabbricazione() {
-        return anno_fabbricazione;
+    public int getAnnoFabbricazione() {
+        return annoFabbricazione;
     }
 
-    public void setAnno_fabbricazione(int anno_fabbricazione) {
-        this.anno_fabbricazione = anno_fabbricazione;
+    public void setAnnoFabbricazione(int annoFabbricazione) {
+        this.annoFabbricazione = annoFabbricazione;
     }
 
     public double getCilindrata() {
@@ -70,7 +70,7 @@ public abstract class Veicolo {
     public String toString() {      // Stampa i dettagli del veicolo
         return  "\n\t Marca: " + getMarca() +
                 "\n\t Modello: " + getModello() +
-                "\n\t Anno di fabbricazione: " + getAnno_fabbricazione() +
+                "\n\t Anno di fabbricazione: " + getAnnoFabbricazione() +
                 "%n\t Cilindrata: %.2f".formatted(getCilindrata()) + " cm\u00B3" +      // Stampa il valore formattato nella notazione #.###,##
                 "%n\t Prezzo: %,.2f".formatted(getPrezzo()) + " \u20AC" +       // Stampa il valore formattato nella notazione #.###,##
                 "%n\t Prezzo ivato: %,.2f".formatted(this.getPrezzoIVA()) + " \u20AC";  // Riferimento al getPrezzoIVA della classe, stampa il valore formattato nella notazione #.###,##
@@ -80,8 +80,8 @@ public abstract class Veicolo {
 class Auto extends Veicolo {
     private int numeroPorte;
 
-    public Auto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, int numeroPorte) {      // Costruttore della sottoclasse Auto, eredita gli attributi dalla classe genitore
-        super(marca, modello, anno_fabbricazione, cilindrata, prezzo);
+    public Auto(String marca, String modello, int annoFabbricazione, double cilindrata, double prezzo, int numeroPorte) {      // Costruttore della sottoclasse Auto, eredita gli attributi dalla classe genitore
+        super(marca, modello, annoFabbricazione, cilindrata, prezzo);
         this.numeroPorte = numeroPorte;
     }
 
@@ -118,8 +118,8 @@ class Auto extends Veicolo {
 class Moto extends Veicolo{
     private boolean sidecar;
 
-    public Moto(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo, boolean sidecar) {  // Costruttore della sottoclasse Moto, eredita gli attributi dalla classe genitore
-        super(marca, modello, anno_fabbricazione, cilindrata, prezzo);
+    public Moto(String marca, String modello, int annoFabbricazione, double cilindrata, double prezzo, boolean sidecar) {  // Costruttore della sottoclasse Moto, eredita gli attributi dalla classe genitore
+        super(marca, modello, annoFabbricazione, cilindrata, prezzo);
         this.sidecar = sidecar;
     }
 
