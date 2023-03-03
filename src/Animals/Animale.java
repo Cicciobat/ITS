@@ -6,12 +6,14 @@ public abstract class Animale {
     protected String nome, razza;
     protected double peso;
     protected boolean isPeloLungo;
+    private static int numeroAnimali;
 
     protected Animale(String nome, String razza, double peso, boolean isPeloLungo) {
         this.nome = nome;
         this.razza = razza;
         this.peso = peso;
         this.isPeloLungo = isPeloLungo;
+        numeroAnimali++;
     }
 
     protected abstract String verso();
@@ -123,6 +125,7 @@ class Cane extends Animale{
 class Gatto extends Animale{
 
     private String carattere;
+    private final double pesoDefaultGatto = 3, pesoMinimoGatto = 0.5;
 
     public String getCarattere() {
         return carattere;
@@ -135,7 +138,7 @@ class Gatto extends Animale{
     protected Gatto(String nome, String razza, double peso, boolean isPeloLungo, String carattere) {
         super(nome, razza, peso, isPeloLungo);
         this.carattere = carattere;
-        this.peso =  (this.peso) < 0.5 ? 3 : this.peso;
+        this.peso = (this.peso) < pesoMinimoGatto ? pesoDefaultGatto : this.peso;
         System.out.println("Un nuovo gatto \u00E8 stato creato");
     }
 
