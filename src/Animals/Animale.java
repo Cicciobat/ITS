@@ -98,7 +98,7 @@ class Cane extends Animale{
     protected Cane(String nome, String razza, double peso, boolean isPeloLungo, boolean isPedigree) {
         super(nome, razza, peso, isPeloLungo);
         this.isPedigree = isPedigree;
-        if (! (getPeso() >= 3)){
+        if ((getPeso() < 3)){
             setPeso(3);
         }
     }
@@ -136,7 +136,7 @@ class Gatto extends Animale{
     protected Gatto(String nome, String razza, double peso, boolean isPeloLungo, String carattere) {
         super(nome, razza, peso, isPeloLungo);
         this.carattere = carattere;
-        if (! (super.peso >= 0.5)){
+        if (getPeso() < 0.5){
             setPeso(3);
         }
     }
