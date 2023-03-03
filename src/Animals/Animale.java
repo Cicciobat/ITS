@@ -1,6 +1,6 @@
-package Animals;
 
-import java.util.ArrayList;
+
+package Animals;
 
 public abstract class Animale {
     protected String nome, razza;
@@ -72,7 +72,7 @@ public abstract class Animale {
         if (this.getClass() == temp.getClass() && this.getNome() == temp.getNome() && this.getRazza() == ((Animale) o).getRazza() && this.getPeso() == ((Animale) o).getPeso() && this.isPeloLungo() == ((Animale) o).isPeloLungo) {
             return true;
         }
-        return false;
+        else return false;
     }
 }
 
@@ -98,9 +98,8 @@ class Cane extends Animale{
     protected Cane(String nome, String razza, double peso, boolean isPeloLungo, boolean isPedigree) {
         super(nome, razza, peso, isPeloLungo);
         this.isPedigree = isPedigree;
-        if ((getPeso() < 3)){
-            setPeso(3);
-        }
+        this.peso = (this.peso < 3) ? 3 : this.peso;
+        System.out.println("Un nuovo cane \u00E8 stato creato");
     }
 
     public String muovi(){
@@ -136,9 +135,8 @@ class Gatto extends Animale{
     protected Gatto(String nome, String razza, double peso, boolean isPeloLungo, String carattere) {
         super(nome, razza, peso, isPeloLungo);
         this.carattere = carattere;
-        if (getPeso() < 0.5){
-            setPeso(3);
-        }
+        this.peso =  (this.peso) < 0.5 ? 3 : this.peso;
+        System.out.println("Un nuovo gatto \u00E8 stato creato");
     }
 
     public String muovi() {
