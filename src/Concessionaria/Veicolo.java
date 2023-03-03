@@ -8,7 +8,7 @@ public abstract class Veicolo {
     protected double cilindrata, prezzo;
     private static int count;       // Contatore per gli oggetti creati
 
-    public Veicolo(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
+    protected Veicolo(String marca, String modello, int anno_fabbricazione, double cilindrata, double prezzo) {        // Costruttore della classe genitore
         count++;    // Viene incrementato il contatore ogni volta che viene richiamato il costruttore
         this.marca = marca;
         this.modello = modello;
@@ -71,9 +71,9 @@ public abstract class Veicolo {
         return  "\n\t Marca: " + getMarca() +
                 "\n\t Modello: " + getModello() +
                 "\n\t Anno di fabbricazione: " + getAnno_fabbricazione() +
-                "\n\t Cilindrata: %.2f".formatted(getCilindrata()) + " cm\u00B3" +      // Stampa il valore formattato nella notazione #.###,##
-                "\n\t Prezzo: %,.2f".formatted(getPrezzo()) + " \u20AC" +       // Stampa il valore formattato nella notazione #.###,##
-                "\n\t Prezzo ivato: %,.2f".formatted(this.getPrezzoIVA()) + " \u20AC";  // Riferimento al getPrezzoIVA della classe, stampa il valore formattato nella notazione #.###,##
+                "%n\t Cilindrata: %.2f".formatted(getCilindrata()) + " cm\u00B3" +      // Stampa il valore formattato nella notazione #.###,##
+                "%n\t Prezzo: %,.2f".formatted(getPrezzo()) + " \u20AC" +       // Stampa il valore formattato nella notazione #.###,##
+                "%n\t Prezzo ivato: %,.2f".formatted(this.getPrezzoIVA()) + " \u20AC";  // Riferimento al getPrezzoIVA della classe, stampa il valore formattato nella notazione #.###,##
     }
 }
 
