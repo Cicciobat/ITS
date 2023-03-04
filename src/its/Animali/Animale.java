@@ -6,7 +6,7 @@
 
 package its.Animali;
 
-/** Classe Astratta per la creazione di nuovi oggetti "Animali" */
+/* Classe Astratta per la creazione di nuovi oggetti "Animali" */
 public abstract class Animale {
     protected String nome;  // Nome dell'animale
     protected String razza;     // Razza dell'animale
