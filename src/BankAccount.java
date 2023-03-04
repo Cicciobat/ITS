@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 import javax.swing.*;
 import java.util.Scanner;
 

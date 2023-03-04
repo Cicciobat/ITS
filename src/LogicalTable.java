@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 public class LogicalTable {
         public static void main(String[] args) {
             boolean p, q;

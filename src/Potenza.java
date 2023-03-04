@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 public class Potenza {
     public static int Pow(int x){
         return x * x;

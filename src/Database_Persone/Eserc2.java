@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 package Database_Persone;
 
 import static Database_Persone.Database.*;

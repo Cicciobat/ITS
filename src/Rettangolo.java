@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 public class Rettangolo {
     public static int base = 10, altezza = 5, area, perimetro;
 

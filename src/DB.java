@@ -1,4 +1,10 @@
 
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 import java.io.IOException;
 import java.sql.*;
 

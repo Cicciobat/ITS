@@ -1,6 +1,12 @@
+/*
+ * Copyright (c) 2023. Ciccio Battaglia
+ * All rights reserved.
+ *
+ */
+
 /* Made by Francesco Battaglia */
 
-package Concessionaria;
+package its.Concessionaria;
 
 public abstract class Veicolo {
     protected String marca, modello;
