@@ -11,7 +11,12 @@ public abstract class Animale {
     protected Animale(String nome, String razza, double peso, boolean isPeloLungo) {
         this.nome = nome;
         this.razza = razza;
-        this.peso = peso;
+        if (Cane.class.equals(getClass())) {
+            this.peso = (peso < 3) ? 3 : peso;
+        }
+        else if (Gatto.class.equals(getClass())) {
+            this.peso = (peso < 0.5) ? 3 : peso;
+        }
         this.isPeloLungo = isPeloLungo;
         numeroAnimali++;
     }
@@ -65,7 +70,7 @@ public abstract class Animale {
                 "\n\t Pelo: " + hasPeloLungo();
     }
 
-
+    @Override
     public boolean equals(Object o) {
         if (!(o instanceof Animale)) {
             return false;
@@ -100,7 +105,6 @@ class Cane extends Animale{
     protected Cane(String nome, String razza, double peso, boolean isPeloLungo, boolean isPedigree) {
         super(nome, razza, peso, isPeloLungo);
         this.isPedigree = isPedigree;
-        this.peso = (this.peso < 3) ? 3 : this.peso;
         System.out.println("Un nuovo cane \u00E8 stato creato");
     }
 
@@ -125,7 +129,6 @@ class Cane extends Animale{
 class Gatto extends Animale{
 
     private String carattere;
-    private final double pesoDefaultGatto = 3, pesoMinimoGatto = 0.5;
 
     public String getCarattere() {
         return carattere;
@@ -138,7 +141,6 @@ class Gatto extends Animale{
     protected Gatto(String nome, String razza, double peso, boolean isPeloLungo, String carattere) {
         super(nome, razza, peso, isPeloLungo);
         this.carattere = carattere;
-        this.peso = (this.peso) < pesoMinimoGatto ? pesoDefaultGatto : this.peso;
         System.out.println("Un nuovo gatto \u00E8 stato creato");
     }
 
