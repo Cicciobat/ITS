@@ -9,7 +9,7 @@ package its.Interface;
 public class Divisione extends Funzionalita implements Operazione{
     private double num1, num2;
 
-    public Divisione(double num1, double num2) {
+    protected Divisione(double num1, double num2) {
         this.num1 = num1;
         this.num2 = num2;
     }

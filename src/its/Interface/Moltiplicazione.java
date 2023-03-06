@@ -9,7 +9,7 @@ package its.Interface;
 public class Moltiplicazione extends Funzionalita implements Operazione{
     private double num1, num2;
 
-    public Moltiplicazione(double num1, double num2) {
+    protected Moltiplicazione(double num1, double num2) {
         this.num1 = num1;
         this.num2 = num2;
     }

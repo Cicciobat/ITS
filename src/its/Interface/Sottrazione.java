@@ -9,7 +9,7 @@ package its.Interface;
 public class Sottrazione extends Funzionalita implements Operazione{
     private double num1, num2;
 
-    public Sottrazione(double num1, double num2) {
+    protected Sottrazione(double num1, double num2) {
         this.num1 = num1;
         this.num2 = num2;
     }
