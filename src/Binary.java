@@ -4,26 +4,26 @@
  *
  */
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class Binary {
+    static ArrayList<Integer> arr = new ArrayList<>();
 
-    static final int LENGHT = 31;
-    static final int ARR_LENGHT = 32;
-
-    public static int[] FindBinary(int x){
-        int bin, i = LENGHT;
-        int[] arr = new int[ARR_LENGHT];
+    public static void findBinary(int x){
+        int bin;
 
         while (x != 0){
             bin = x % 2;
-            arr[i]=bin;
+            arr.add(bin);
             x /= 2;
-            i--;
         }
-        return arr;
+        Collections.reverse(arr);
+
+        for (Integer i: arr) {
+            System.out.print(i);
+        }
     }
+
     public static void main(String[] args) {
         int a;
 
@@ -33,6 +33,6 @@ public class Binary {
         a = sc.nextInt();
 
         System.out.print("Il numero in binario è: ");
-        System.out.println(Arrays.toString(FindBinary(a)));
+        findBinary(a);
     }
 }
