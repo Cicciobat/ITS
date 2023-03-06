@@ -7,9 +7,9 @@
 package Abstract;
 
 public abstract class FormaGeometrica {
-    public abstract double perimetro();
-    public abstract double area();
-    public String TipoFigura(){
+    protected abstract double perimetro();
+    protected abstract double area();
+    protected String TipoFigura(){
         return "Sono un " + getClass().getSimpleName();
     }
 }
