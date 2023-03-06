@@ -45,16 +45,16 @@ public abstract class ContrattoTelefonico {
         setUtenteCognome(utenteCognome);
     }
 
-    /* costoSingolo calcola il costo di una singola chiamata in base alla sua durata, passata come parametro */
+    /* Calcola il costo di una singola chiamata in base alla sua durata, passata come parametro */
     public abstract double costoSingolo(double durataChiamata);
 
-    /* bolletta calcola il costo bolletta */
+    /* Calcola il costo bolletta */
     public abstract double bolletta();
 
-    /* stampaBolletta restituisce i dati della bolletta */
+    /* Restituisce i dati della bolletta */
     public abstract String stampaBolletta();
 
-    /* toString restituisce l'utente ed il numero di telefono */
+    /* Restituisce l'utente ed il numero di telefono */
     @Override
     public String toString() {
         return "Utente: " + getUtenteNome() + " " + getUtenteCognome() + " - Numero: " + getNumeroTelefono();
@@ -64,9 +64,9 @@ public abstract class ContrattoTelefonico {
 final class ContrattoFisso extends ContrattoTelefonico{
     private final double scattoRispostaFisso = 0.19, costoMinutoFisso = 0.08;       // Costi fissi per la bolletta
 
-    private ArrayList<Double> bollettaFisso = new ArrayList<>();        // Creazione di un nuovo contenitore per g;li importi delle bollette
+    private ArrayList<Double> bollettaFisso = new ArrayList<>();        // Creazione di un nuovo contenitore per gli importi delle bollette
 
-    /* getBolletta restituisce l'ArrayList delle bollette */
+    /* Restituisce l'ArrayList delle bollette */
         public ArrayList<Double> getBollettaFisso() {
         return bollettaFisso;
     }
@@ -76,7 +76,7 @@ final class ContrattoFisso extends ContrattoTelefonico{
         super(numeroTelefono, utenteNome, utenteCognome);
     }
 
-    /* costoSingolo calcola e restituisce il costo della singola chiamata, contestualmente lo aggiunge al contenitore bollettaFisso */
+    /* Calcola e restituisce il costo della singola chiamata, contestualmente lo aggiunge al contenitore bollettaFisso */
     @Override
     public double costoSingolo(double durataChiamata) {
         double costoChiamata = (double) Math.round((scattoRispostaFisso + (costoMinutoFisso * durataChiamata)) * 100) / 100;        // Converte costoChiamata a due cifre decimali
@@ -105,18 +105,20 @@ final class ContrattoFisso extends ContrattoTelefonico{
 }
 
 final class ContrattoMobile extends ContrattoTelefonico{
-    private final double scattoRispostaMobile = 0.23, costoMinutoMobile = 0.09;     // Costi
-    private ArrayList<Double> bollettaMobile = new ArrayList<>();
+    private final double scattoRispostaMobile = 0.23, costoMinutoMobile = 0.09;     // Costi fissi per la bolletta
+    private ArrayList<Double> bollettaMobile = new ArrayList<>();       // Creazione di un nuovo contenitore per gli importi delle bollette
 
+    /* Restituisce l'ArrayList delle bollette */
     public ArrayList<Double> getBollettaMobile() {
         return bollettaMobile;
     }
 
+    /* Costruttore per la classe ContrattoMobile, eredita gli attributi da ContrattoTelefonico */
     public ContrattoMobile(String numeroTelefono, String utenteNome, String utenteCognome) {
         super(numeroTelefono, utenteNome, utenteCognome);
     }
 
-    /* costoSingolo calcola e restituisce il costo della singola chiamata, contestualmente lo aggiunge al contenitore bollettaMobile */
+    /* Calcola e restituisce il costo della singola chiamata, contestualmente lo aggiunge al contenitore bollettaMobile */
     @Override
     public double costoSingolo(double durataChiamata) {
         double costoChiamata = (double) Math.round((scattoRispostaMobile + (costoMinutoMobile * durataChiamata)) * 100) / 100;      // Converte costoChiamata a due cifre decimali
