@@ -82,7 +82,7 @@ public abstract class Animale {
     public String toString() {      // Stampa i dettagli
         return "\n\t Nome: " + getNome() +
                 "\n\t Razza: " + getRazza() +
-                "%n\t Peso: %,.2f".formatted(getPeso()) + " Kg" +
+                "%n\t Peso: %,.2f %s".formatted(getPeso(), "Kg")+
                 "\n\t Pelo: " + hasPeloLungo();
     }
 
