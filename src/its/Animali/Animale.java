@@ -104,7 +104,7 @@ public abstract class Animale {
      * La classe Cane estende la classe Animali, resa final poiché non ha ulteriori classi che la ereditano
      */
 final class Cane extends Animale{
-    private final double pesoDefaultCane = 3, pesoMinimoCane = 3; // Valori predefiniti per il peso minimo ed il peso da inserire come valore di default in caso venga inserito un parametro errato
+    private final double pesoDefaultCane = 3, pesoMinimoCane = 3;       // Valori predefiniti per il peso minimo ed il peso da inserire come valore di default in caso venga inserito un parametro errato
 
     private boolean isPedigree;     // Pedigree del cane: True se presente, False se assente
 
