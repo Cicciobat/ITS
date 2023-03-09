@@ -95,10 +95,8 @@ public abstract class Animale {
             return false;
         }
         Animale temp = (Animale) o;
-        if (this.getClass() == temp.getClass() && this.getNome() == temp.getNome() && this.getRazza() == temp.getRazza() && this.getPeso() == temp.getPeso() && this.isPeloLungo() == temp.isPeloLungo) {
-            return true;
-        }
-        else return false;
+
+        return this.getClass() == temp.getClass() && this.getNome() == temp.getNome() && this.getRazza() == temp.getRazza() && this.getPeso() == temp.getPeso() && this.isPeloLungo() == temp.isPeloLungo;
     }
 }
 
