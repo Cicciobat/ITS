@@ -12,14 +12,14 @@ import java.util.ArrayList;
  * Classe Zoo per la creazione di nuovi ArrayList di "Animali"
  */
 public class Zoo {
-    ArrayList<Animale> animali; // ArrayList di Animali
+    private ArrayList<Animale> animali; // ArrayList di Animali
 
     /*
      * Costruttore per la creazione di nuovi ArrayList di "Animali"
      */
     public Zoo() {
-        setAnimali(new ArrayList<>()); // Viene inizializzato l'ArrayList vuoto
-    }
+        setAnimali(new ArrayList<>());
+    }       // Viene inizializzato l'ArrayList vuoto
 
     /*
      * Di seguito metodi getter and setter per gli attributi della classe
