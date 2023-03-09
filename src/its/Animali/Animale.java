@@ -151,6 +151,7 @@ final class Cane extends Animale{
     /*
      * Ridefinizione del metodo muovi() incluso in Animale, ritorna il movimento dell'animale
      */
+    @Override
     public String muovi(){
         return "Il cane cammina";
     }
@@ -215,6 +216,7 @@ final class Gatto extends Animale{
     /*
      * Ridefinizione del metodo muovi() incluso in Animale, ritorna il movimento dell'animale
      */
+    @Override
     public String muovi() {
         return "Il gatto si struscia";
     }
