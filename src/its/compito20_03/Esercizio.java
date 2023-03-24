@@ -17,9 +17,8 @@ public class Esercizio {
                 temp.add(i);
             }
         }
-        Collections.sort(temp);
 
-        int minDispari = temp.get(0);
+        int minDispari = Collections.min(temp);
 
         return "Il numero dispari minore tra quelli inseriti e' : " + minDispari;
     }
