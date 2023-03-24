@@ -4,7 +4,8 @@
  *
  */
 
-package its.compito20_03;import java.util.ArrayList;
+package its.compito20_03;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 

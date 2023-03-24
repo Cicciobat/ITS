@@ -11,8 +11,8 @@ public class Esercizio2 {
 
     public static void main(String args[]) {
 
+        int a;
         int[] V = new int[5];
-        int sum = 0;
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Questo programma calcola il minore ed il maggiore di 5 numeri " +
@@ -20,9 +20,8 @@ public class Esercizio2 {
 
         for (int i = 0; i < V.length; i++) {
             System.out.println("Inserisci un numero: ");
-            int a;
             a = sc.nextInt();
-            sum += V[i] = a;
+            V[i] = a;
         }
 
         Arrays.sort(V);
