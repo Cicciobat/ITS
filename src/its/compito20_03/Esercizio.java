@@ -32,11 +32,10 @@ public class Esercizio {
         System.out.println("Questo programma restituisce il numero dispari minore tra i numeri " +
                 "inseriti.");
         System.out.println("Inserisci un numero: (Inserisci -1 per uscire.)");
-        a = sc.nextInt();
-        while (a != -1){
+
+        while ((a = sc.nextInt()) != -1){
             myArrayList.add(a);
             System.out.println("Inserisci un altro numero: ");
-            a = sc.nextInt();
         }
 
         Collections.sort(myArrayList);
