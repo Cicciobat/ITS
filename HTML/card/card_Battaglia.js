@@ -3,12 +3,17 @@
  * All rights reserved.
  *
  */
-    let ciccio = document.getElementById("ciccio")
-    ciccio.addEventListener('click', flipCard)
-    let steve = document.getElementById("steve")
-    steve.addEventListener('click', flipCard)
 
-    function flipCard() {
+/* Get to a class name */
+let images = document.getElementsByClassName("image")
+
+/* Check if images was clicked and then flip it */
+for (const image of images) {
+    image.addEventListener('click', flipCard)
+}
+
+/* Flip the card function */
+function flipCard() {
         let card = document.getElementById("card")
         card.classList.toggle("flipCard")
     }
