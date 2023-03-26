@@ -3,13 +3,17 @@
  * All rights reserved.
  *
  */
+
+        /* Card container */
         .container {
             margin: 0 auto;
             position: relative;
             width: 400px;
             height: 563px;
+            transition: all 0.8s ease;
         }
 
+        /* All card */
         .card {
             position: absolute;
             transform-style: preserve-3d;
@@ -18,6 +22,7 @@
             height: 563px;
         }
 
+        /* Front card field */
         .front {
             position: absolute;
             backface-visibility: hidden;
@@ -25,6 +30,7 @@
             height: 563px;
         }
 
+        /* Back card field */
         .back {
             position: absolute;
             backface-visibility: hidden;
@@ -33,6 +39,7 @@
 
         }
 
+        /* Rotate the card for 180deg */
         .flipCard {
             transform: rotateY(180deg);
         }
@@ -42,16 +49,14 @@
             user-select: none;
         }
 
+        /* H5 margin & lin-height*/
         h5 {
             margin: 0 auto;
             line-height: 50px;
         }
 
-        .container {
-            transition: all 0.8s ease;
-        }
-
-        article.front-article {
+        /* Front card field*/
+        .front-article {
             background-color: lightgray;
             border: 1px black solid;
             border-radius: 6%;
@@ -60,12 +65,13 @@
             margin: 0 auto;
             padding: 0;
             text-align: center;
-            box-shadow: 0px 0px 15px 1px grey;
+            box-shadow: 0 0 15px 1px grey;
             visibility: visible;
 
         }
 
-        article.back-article {
+        /* Back card field */
+        .back-article {
             background-color: #ff9d6c;
             border: 1px black solid;
             border-radius: 6%;
@@ -75,31 +81,36 @@
             padding: 0;
             text-align: center;
             top: 50px;
-            right: 0px;
-            left: 0px;
+            right: 0;
+            left: 0;
             visibility: visible;
         }
 
+        /* All section margin & padding */
         section {
             margin: 0 auto;
             padding: 0;
         }
 
+        /* Abbr in Me h1 name */
         abbr {
             border-bottom: none !important;
             cursor: help;
             text-decoration: none !important;
         }
 
+        /* Div inside fieldset */
         .fieldset-div {
             height: 50px;
             border-bottom: 1px black solid;
         }
 
+        /* Section inside div in fieldset */
         .fieldset-section {
             height: 50px;
         }
 
+        /* Me image */
         .me {
             border-radius: 50% 50% 50% 50%;
             height: 150px;
@@ -109,14 +120,17 @@
             display: block;
             background-position: center;
             margin: 0 auto;
-            box-shadow: 0px 0px 20px 0px grey;
+            box-shadow: 0 0 20px 0 grey;
             cursor: pointer;
         }
-        .me:hover{
+
+        /* Me image hovering effects*/
+        .me:hover {
             transition: 0.5s linear;
-            box-shadow: 0px 0px 15px 5px grey;
+            box-shadow: 0 0 15px 5px grey;
         }
 
+        /* ITS image */
         .steve-jobs-academy {
             border-radius: 50% 50% 50% 50%;
             height: 150px;
@@ -126,63 +140,72 @@
             display: block;
             background-position: center;
             margin: 0 auto;
-            box-shadow: 0px 0px 20px 0px #ffbf9d;
+            box-shadow: 0 0 20px 0 #ffbf9d;
             cursor: pointer;
         }
+
+        /* ITS image hovering effects */
         .steve-jobs-academy:hover{
             transition: 0.5s linear;
-            box-shadow: 0px 0px 15px 5px #ffbf9d;
+            box-shadow: 0 0 15px 5px #ffbf9d;
         }
 
-
+        /* Link Color and alignment */
         a {
-            vertical-align: middle;
             color: black;
         }
 
+        /* Shadow behind ITS text */
         .its-figure {
             color: #f8f8f8;
-            text-shadow: 0px 0px 5px black;
+            text-shadow: 0 0 5px black;
         }
 
-        legend {
+        /* Me Card Fieldset Legend */
+        .me-legend {
             color: white;
             background-color: grey;
             border-radius: 10%;
         }
 
+        /* ITS Card Fieldset Legend */
         .its-legend {
             color: white;
             background-color: #e84522;
             border-radius: 10%;
         }
 
-        fieldset {
+        /* Me Card Fieldset */
+        .me-fieldset {
             background-color: white;
-            border-radius: 0px 10px 0px 10px;
+            border-radius: 0 10px 0 10px;
             height: 180px;
-            box-shadow: 0px 0px 15px 1px grey;
+            box-shadow: 0 0 15px 1px grey;
             border: 1px solid grey;
         }
 
+        /* ITS Card Fieldset */
         .its-field {
             background-color: white;
-            border-radius: 0px 10px 0px 10px;
+            border-radius: 0 10px 0 10px;
             height: 180px;
-            box-shadow: 0px 0px 15px 1px #ffbf9d;
+            box-shadow: 0 0 15px 1px #ffbf9d;
             border: 1px solid grey;
         }
 
+        /* Article Footer */
         footer {
             height: 50px;
         }
 
+        /* Social Box */
         .social {
             line-height: 60px;
             width: 400px;
             height: 60px;
         }
 
+        /* Social Icons */
         .fa {
             padding: 8px;
             font-size: 30px;
@@ -192,13 +215,14 @@
             border-radius: 50%;
         }
 
-        /* Add a hover effect if you want */
+        /* Social Hover Effects */
         .fa:hover {
             transition: all 0.5s;
             transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
             border-radius: 20%;
         }
 
+        /* Github */
         .fa-github {
             background: black;
             color: white;
@@ -212,12 +236,13 @@
             margin: 0 20px 0 0;
         }
 
-        /* Twitter */
+        /* Instagram */
         .fa-instagram {
             background: #ba0059;
             color: white;
         }
 
+        /* Linkedin */
         .fa-linkedin {
             background: #0a66c2;
             color: white;
