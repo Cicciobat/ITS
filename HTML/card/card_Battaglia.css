@@ -78,14 +78,11 @@
             right: 0px;
             left: 0px;
             visibility: visible;
-            transition: transform 0.8s;
-
         }
 
         section {
             margin: 0 auto;
             padding: 0;
-
         }
 
         abbr {
@@ -112,9 +109,12 @@
             display: block;
             background-position: center;
             margin: 0 auto;
-            box-shadow: 0px 0px 15px 3px grey;
+            box-shadow: 0px 0px 20px 0px grey;
             cursor: pointer;
-
+        }
+        .me:hover{
+            transition: 0.5s linear;
+            box-shadow: 0px 0px 15px 5px grey;
         }
 
         .meSecond {
@@ -126,9 +126,14 @@
             display: block;
             background-position: center;
             margin: 0 auto;
-            box-shadow: 0px 0px 15px 3px #ffbf9d;
+            box-shadow: 0px 0px 20px 0px #ffbf9d;
             cursor: pointer;
         }
+        .meSecond:hover{
+            transition: 0.5s linear;
+            box-shadow: 0px 0px 15px 5px #ffbf9d;
+        }
+
 
         a {
             vertical-align: middle;
@@ -189,7 +194,9 @@
 
         /* Add a hover effect if you want */
         .fa:hover {
-            opacity: 0.7;
+            transition: all 1s;
+            transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+            border-radius: 20%;
         }
 
         .fa-github {
