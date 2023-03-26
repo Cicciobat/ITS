@@ -145,6 +145,12 @@ legend {
     border-radius: 10%;
 }
 
+/* 360 degrees rotation when hovering in legend */
+legend:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+}
+
 /* Me card fieldset legend */
 .me-legend {
     background-color: grey;
