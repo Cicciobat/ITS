@@ -3,7 +3,13 @@
  * All rights reserved.
  *
  */
+ @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
 
+        body {
+            margin: 50px 0 0 0;
+            user-select: none;
+            font-family: "Quicksand";
+        }
         /* Card container */
         .container {
             margin: 0 auto;
@@ -20,23 +26,32 @@
             transition: all 1.2s ease;
             width: 400px;
             height: 563px;
+            border-radius: 6%;
+
+        }
+
+        article {
+            position: absolute;
+            height: inherit;
+            margin: 0 auto;
+            padding: 0 10px;
+            text-align: center;
+            border-radius: 6%;
+            box-shadow: 0 0 15px 1px grey;
         }
 
         /* Front card field */
         .front {
-            position: absolute;
+            background-color: #eaeaea;
             backface-visibility: hidden;
-            width: 400px;
-            height: 563px;
         }
 
         /* Back card field */
         .back {
-            position: absolute;
+
             backface-visibility: hidden;
             transform: rotateY(180deg);
-            width: 402px;
-
+            background-color: #ffcbaf;
         }
 
         /* Rotate the card for 180deg */
@@ -44,47 +59,10 @@
             transform: rotateY(180deg);
         }
 
-        body {
-            margin: 50px 0 0 0;
-            user-select: none;
-        }
-
-        /* H5 margin & lin-height*/
-        h5 {
+        /* Fieldset paragraph margin & lin-height*/
+        .fieldset-paragraph {
             margin: 0 auto;
             line-height: 50px;
-        }
-
-        /* Front card field*/
-        .front-article {
-            background-color: lightgray;
-            border: 1px black solid;
-            border-radius: 6%;
-            width: 400px;
-            height: 563px;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-            box-shadow: 0 0 15px 1px grey;
-            visibility: visible;
-
-        }
-
-        /* Back card field */
-        .back-article {
-            background-color: #ff9d6c;
-            border: 1px black solid;
-            border-radius: 6%;
-            width: 400px;
-            height: 563px;
-            margin: 0 auto;
-            padding: 0;
-            text-align: center;
-            top: 50px;
-            right: 0;
-            left: 0;
-            box-shadow: 0 0 15px 1px grey;
-            visibility: visible;
         }
 
         /* All section margin & padding */
@@ -141,14 +119,14 @@
             display: block;
             background-position: center;
             margin: 0 auto;
-            box-shadow: 0 0 20px 0 #ffbf9d;
+            box-shadow: 0 0 20px 0 #ff8956;
             cursor: pointer;
         }
 
         /* ITS image hovering effects */
         .steve-jobs-academy:hover{
             transition: 0.5s linear;
-            box-shadow: 0 0 15px 5px #ffbf9d;
+            box-shadow: 0 0 15px 5px #ff8956;
         }
 
         /* Link Color and alignment */
@@ -156,11 +134,6 @@
             color: black;
         }
 
-        /* Shadow behind ITS text */
-        .its-figure {
-            color: #f8f8f8;
-            text-shadow: 0 0 5px black;
-        }
 
         /* Me Card Fieldset Legend */
         .me-legend {
@@ -176,22 +149,21 @@
             border-radius: 10%;
         }
 
-        /* Me Card Fieldset */
-        .me-fieldset {
+        fieldset {
             background-color: white;
-            border-radius: 0 10px 0 10px;
+            border-radius: 0 15px 0 15px;
             height: 180px;
             box-shadow: 0 0 15px 1px grey;
             border: 1px solid grey;
         }
+        /* Me Card Fieldset */
+        .me-fieldset {
+            box-shadow: 0 0 15px 1px grey;
+        }
 
         /* ITS Card Fieldset */
         .its-field {
-            background-color: white;
-            border-radius: 0 10px 0 10px;
-            height: 180px;
-            box-shadow: 0 0 15px 1px #e66b20;
-            border: 1px solid grey;
+            box-shadow: 0 0 15px 1px #ff9c56;
         }
 
         /* Article Footer */
