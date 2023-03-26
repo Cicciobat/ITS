@@ -51,7 +51,7 @@
             transition: all 0.8s ease;
         }
 
-        article.firstArticle {
+        article.front-article {
             background-color: lightgray;
             border: 1px black solid;
             border-radius: 6%;
@@ -65,7 +65,7 @@
 
         }
 
-        article.secondArticle {
+        article.back-article {
             background-color: #ff9d6c;
             border: 1px black solid;
             border-radius: 6%;
@@ -91,12 +91,12 @@
             text-decoration: none !important;
         }
 
-        .divCorpo {
+        .fieldset-div {
             height: 50px;
             border-bottom: 1px black solid;
         }
 
-        .secCorpo {
+        .fieldset-section {
             height: 50px;
         }
 
@@ -117,7 +117,7 @@
             box-shadow: 0px 0px 15px 5px grey;
         }
 
-        .meSecond {
+        .steve-jobs-academy {
             border-radius: 50% 50% 50% 50%;
             height: 150px;
             width: 150px;
@@ -129,7 +129,7 @@
             box-shadow: 0px 0px 20px 0px #ffbf9d;
             cursor: pointer;
         }
-        .meSecond:hover{
+        .steve-jobs-academy:hover{
             transition: 0.5s linear;
             box-shadow: 0px 0px 15px 5px #ffbf9d;
         }
@@ -140,7 +140,7 @@
             color: black;
         }
 
-        .itsFig {
+        .its-figure {
             color: #f8f8f8;
             text-shadow: 0px 0px 5px black;
         }
@@ -151,7 +151,7 @@
             border-radius: 10%;
         }
 
-        .secondLeg {
+        .its-legend {
             color: white;
             background-color: #e84522;
             border-radius: 10%;
@@ -165,7 +165,7 @@
             border: 1px solid grey;
         }
 
-        .secField {
+        .its-field {
             background-color: white;
             border-radius: 0px 10px 0px 10px;
             height: 180px;
@@ -194,7 +194,7 @@
 
         /* Add a hover effect if you want */
         .fa:hover {
-            transition: all 1s;
+            transition: all 0.5s;
             transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
             border-radius: 20%;
         }
