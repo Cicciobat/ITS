@@ -1,0 +1,123 @@
+<!--
+  ~ Copyright (c) 2023. Ciccio Battaglia
+  ~ All rights reserved.
+  ~
+  -->
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <title>Ciccio Battaglia</title>
+  <meta charset = "UTF-8">
+  <link href = "card_Battaglia.css"
+        rel = "stylesheet">
+  <link href =
+                "data:image/png;base64,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"
+        rel = "icon"
+        type = "image/x-icon">
+  <link href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel = "stylesheet">
+</head>
+<body>
+<div class = "container">
+  <div class = "card"
+       id = "card">
+    <div class = "front">
+      <article class = "firstArticle"
+               id = "firstArticle">
+        <section>
+          <figure>
+            <div class = "me"
+                 id = "ciccio"></div>
+            <figcaption>
+              <h1><abbr title = "Data di nascita: 09/12/1996 - Anni: 26">Francesco Maria Battaglia</abbr></h1>
+              <p>Studente di Web &amp; Mobile Development presso l'Istituto Tecnico Superiore Steve Jobs Academy. Iscritto al Corso 23.
+              </p>
+            </figcaption>
+          </figure>
+        </section>
+        <fieldset>
+          <legend>Skills
+          </legend>
+          <div class = "divCorpo">
+            <section class = "secCorpo"><h5>Java</h5></section>
+          </div>
+          <div
+                  class = "divCorpo">
+            <section
+                    class = "secCorpo"><h5>HTML, CSS & JS</h5></section>
+          </div>
+          <div
+                  class = "divCorpo">
+            <section class = "secCorpo"><h5>mySQL & MongoDB</h5></section>
+          </div>
+        </fieldset>
+        <footer>
+          <nav>
+            <div class = "social"><a class = "fa fa-github"
+                                     href = "https://github.com/Cicciobat"
+                                     target =
+                                             "_blank"></a>
+              <a class = "fa fa-linkedin"
+                 href = "https://www.linkedin.com/in/cicciobattaglia/"
+                 target = "_blank"></a>
+            </div>
+          </nav>
+        </footer>
+      </article>
+    </div>
+    
+    <div class = "back">
+      <article class = "secondArticle"
+               id = "secondArticle">
+        <section>
+          <figure>
+            <div class = "meSecond"
+                 id = "steve"></div>
+            <figcaption class = "itsFig">
+              <h1>Steve Jobs Academy</h1>
+              <p>La Steve Jobs Academy è l’unico Istituto tecnico superiore in tutto il sud Italia ad offrire corsi di alta
+                 specializzazione
+                 tecnica
+                 post diploma.</p>
+            </figcaption>
+          </figure>
+        </section>
+        <fieldset class = "secField">
+          <legend class = "secondLeg">Info
+          </legend>
+          <div class = "divCorpo">
+            <section class = "secCorpo"><a href = "tel:0933351517"><h5>Tel. (+39) 0933 351517</h5></a></section>
+          </div>
+          <div
+                  class = "divCorpo">
+            <section
+                    class = "secCorpo"><a href = "mailto:info@stevejobs.academy"><h5>info@stevejobs.academy</h5></a></section>
+          </div>
+          <div
+                  class = "divCorpo">
+            <section class = "secCorpo"><h5>Via Degli Studi, 8 - 95041 Caltagirone (CT)</h5></section>
+          </div>
+        </fieldset>
+        <footer>
+          <nav>
+            <div class = "social">
+              <a class = "fa fa-facebook"
+                 href = "https://www.facebook.com/stevejobsacademy/"
+                 target = "_blank"></a>
+              <a class = "fa fa-instagram"
+                 href = "https://www.instagram.com/stevejobsacademy/"
+                 target = "_blank"></a>
+              <a class = "fa fa-linkedin"
+                 href = "https://www.linkedin.com/school/its-steve-jobs/"
+                 target = "_blank"></a>
+            </div>
+          </nav>
+        </footer>
+      </article>
+    </div>
+  </div>
+</div>
+<script src = "card_Battaglia.js"></script>
+</body>
+</html>
