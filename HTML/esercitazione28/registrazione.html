@@ -1,0 +1,172 @@
+<!--
+  ~ Copyright (c) 2023. Ciccio Battaglia
+  ~ All rights reserved.
+  ~
+  -->
+
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset = "UTF-8">
+  <title>Register</title>
+  <link href = "pen.png"
+        rel = "icon"
+        type = "image/png">
+  <link href = "registrazione.css"
+        rel = "stylesheet">
+</head>
+
+<body class = "main">
+<div class = "main-div">
+  <h1>Candidatura</h1>
+  <br>
+  <form action = "offerta_battaglia.html"
+        method = "post"
+        onsubmit = "alerts()">
+    <label for = "name"></label>
+    <input autofocus
+           class = "field-input"
+           id = "name"
+           name = "name"
+           placeholder = "Nome"
+           required
+           title = "Required"
+           type = "text"><br>
+    <label for = "surname"></label>
+    <input class = "field-input"
+           id = "surname"
+           name = "surname"
+           placeholder = "Cognome"
+           required
+           title = "Required"
+    
+           type = "text"><br>
+    <label for = "bday"></label>
+    <input class = "field-input"
+           id = "bday"
+           max = "2030-01-01"
+           min = "1930-01-01"
+           name = "bday"
+           onfocus = "(type='date')"
+           placeholder = "Data di nascita"
+           required
+           title = "Required"><br>
+    <label for = "email"></label>
+    <input class = "field-input"
+           id = "email"
+           name = "email"
+           placeholder = "eMail"
+           required
+           title = "Required"
+           type = "email"><br>
+    <label for = "codfisc"></label><input
+          class = "field-input"
+          id = "codfisc"
+          name = "codfisc"
+          pattern = ".{16}"
+          placeholder = "Codice fiscale"
+          required
+          title = "Required"
+          type = "text"><br><br>
+    <label for = "experience"></label><br>
+    <textarea class = "experience"
+              id = "experience"
+              name = "experience"
+              placeholder = "Esperienze lavorative"></textarea><br>
+    
+    <div class = "availability">
+      <p>Disponibilità:<abbr title = "Campo obbligatorio.">*</abbr></p>
+      
+      <div class = "availability-form">
+        <input id = "full-time"
+               name = "availability"
+               required
+               type = "radio"
+               value = "full-time">
+        <label for = "full-time"> Full-Time </label>
+        <br>
+        <input id = "part-time"
+               name = "availability"
+               required
+               type = "radio"
+               value = "part-time">
+        <label for = "part-time"> Part-Time </label>
+        <br>
+        <input
+                id = "weekend"
+                name = "availability"
+                required
+                type = "radio"
+                value = "weekend">
+        <label for = "weekend"> Weekend </label>
+      </div>
+    </div>
+    <br>
+    
+    <input id = "notturno"
+           name = "notturno"
+           type = "checkbox">
+    <label for = "notturno"> Disponibile per orari notturni. </label><br><br>
+    
+    
+    <label for = "provincia">Provincia:</label><br>
+    <select class = "country"
+            id = "provincia"
+            name = "provincia">
+      <option disabled
+              selected>-- Seleziona una provincia --
+      </option>
+      <optgroup label = "Lombardia">
+        <option value = "bergamo">Bergamo</option>
+        <option value = "milano">Milano</option>
+        <option value = "monza">Monza</option>
+      </optgroup>
+      <optgroup label = "Sicilia">
+        <option value = "catania">Catania</option>
+        <option value = "messina">Messina</option>
+        <option value = "palermo">Palermo</option>
+      </optgroup>
+    </select><br><br>
+    <input id = "transfer"
+           name = "transfer"
+           type = "checkbox">
+    <label for = "transfer"> Disponibile al trasferimento. </label><br><br>
+    <div class = "agreement-container">
+      <div class = "agreement-check">
+        <input id = "agreement"
+               name = "agreement"
+               required
+               style = "margin: 0 2px 0 0"
+               type = "checkbox"></div>
+      
+      
+      <div class = "agreement-text"><label for = "agreement"> Ho
+                                                              letto
+                                                              l'informativa
+                                                              sulla
+                                                              privacy ed
+                                                              acconsento alla
+                                                              memorizzazione
+                                                              dei
+                                                              miei
+                                                              dati, secondo quanto stabilito
+                                                              dal regolamento
+                                                              europeo per la
+                                                              protezione dei dati personali
+                                                              n. 679/2016
+                                                              (GDPR).<abbr
+                title = "Accettazione obbligatoria."> *</abbr> </label>
+      </div>
+    </div>
+    <br>
+    <br>
+    <button class = "send"
+            id = "send"
+            name = "send"
+            type = "submit">Invia
+    </button>
+  </form>
+</div>
+<script src = "registrazione.js"></script>
+</body>
+</html>
